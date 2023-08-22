@@ -1,5 +1,5 @@
 import React from "react";
-
+export const dynamic = 'force-static'
 export default function AboutPage() {
   return (
     <div className="max-w-6xl mx-auto space-y-4 space-x-4 text-justify">

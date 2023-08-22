@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+export const dynamic = 'force-static'
+
 async function getMovie(movieId: number) {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`

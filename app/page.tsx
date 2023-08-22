@@ -1,5 +1,8 @@
 import HomeResults from "@/components/Results";
 
+
+export const dynamic = 'force-static'
+
 const API_KEY = process.env.API_KEY;
 
 export default async function Home({
