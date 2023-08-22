@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,14 +23,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn("bg-secondary", inter.className)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div>
-            {/* Header */}
-            <Header />
-            {/* Navbar */}
-            <Navbar />
-            {/* SearchBox */}
-            {children}
-            {/* Footer */}
+          <div className="relative ">
+            <div className="a">
+              {/* Header */}
+              <Header />
+              {/* Navbar */}
+              <Navbar />
+              {/* SearchBox */}
+              {children}
+            </div>
+            <div className="sticky bg-fixed bottom-0 bg-background w-full">
+              {/* Footer */}
+              <Footer />
+            </div>
           </div>
         </ThemeProvider>
       </body>

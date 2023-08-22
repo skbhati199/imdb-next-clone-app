@@ -13,7 +13,7 @@ export default function MenuItem({ title, address, Icon }: MenuItemProps) {
     <div>
       <Link
         href={address}
-        className="flex  lg:mx-6 hover:text-amber-500"
+        className="flex  font-semibold lg:mx-6 hover:text-amber-500"
       >
         <Icon className="text-2xl sm:hidden mx-4" />
         <p className="hidden sm:block my-2 text-sm">{title}</p>
